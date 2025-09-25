@@ -25,8 +25,11 @@ This project demonstrates a **step-by-step booking flow** with seat selection, v
 
 ## Project Structure
 ┣ index.html # Main app (structure + stepper)
+
 ┣ style.css # Styling for layout, stepper, and seats
+
 ┣ script.js # Core logic (stepper navigation, validation, seat selection)
+
 ┗ README.md # Documentation
 
 ---
