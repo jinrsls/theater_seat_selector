@@ -37,7 +37,7 @@ This project demonstrates a **step-by-step booking flow** with seat selection, v
 ## Installation & Setup
 1. Clone this repository:
    
-   git clone https://github.com/your-username/seat-booking.git
+  [git clone https://github.com/your-username/seat-booking.git](https://github.com/jinrsls/theater_seat_selector.git)
 
    
 2. Navigate into the project folder:
