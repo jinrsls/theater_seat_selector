@@ -5,7 +5,7 @@ This project demonstrates a **step-by-step booking flow** with seat selection, v
 
 ---
 
-## 🚀 Features
+## Features
 - Multi-step **booking wizard (stepper)**:
   1. Select Movie
   2. Choose Date & Time
