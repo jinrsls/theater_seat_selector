@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sugarland Theaters - Seat Booking</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Sugarland Theaters</h1>
+        <p>Book Your Seats Easily Anytime, Anywhere</p>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div class="booking-card">
+            <!-- Stepper -->
+            <div class="stepper" aria-hidden="false">
+                <div class="step active">1. Movie</div>
+                <div class="step">2. Date & Time</div>
+                <div class="step">3. Persons</div>
+                <div class="step">4. Seats</div>
+                <div class="step">5. Confirm</div>
+            </div>
+
+            <form id="bookingForm" novalidate>
+                <!-- Step 1: Movie -->
+                <div class="step-content active" data-step="0">
+                    <div class="form-group">
+                        <label for="movie">Select Movie</label>
+                        <div class="select-wrapper" id="movieWrapper">
+                            <select id="movie" required>
+                                <option value="">-- Choose a movie --</option>
+                                <option value="Avengers: Endgame">Avengers: Endgame</option>
+                                <option value="Spider-Man: No Way Home">Spider-Man: No Way Home</option>
+                                <option value="Inside Out 2">Inside Out 2</option>
+                                <option value="Oppenheimer">Oppenheimer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="step-nav">
+                        <button type="button" class="btn next-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Date & Time -->
+                <div class="step-content" data-step="1">
+                    <div class="form-group">
+                        <label for="showDate">Choose Date</label>
+                        <input type="date" id="showDate" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="showTime">Choose Time</label>
+                        <input type="time" id="showTime" required />
+                    </div>
+                    <div class="step-nav">
+                        <button type="button" class="btn back-btn">Back</button>
+                        <button type="button" class="btn next-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Persons -->
+                <div class="step-content" data-step="2">
+                    <div class="form-group">
+                        <label for="personCount">Number of Persons</label>
+                        <input type="number" id="personCount" min="1" placeholder="Enter number of persons" required />
+                    </div>
+                    <div class="step-nav">
+                        <button type="button" class="btn back-btn">Back</button>
+                        <button type="button" class="btn next-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Seats -->
+                <div class="step-content" data-step="3">
+                    <div class="form-group">
+                        <label>Select Your Seats</label>
+                        <div class="theater">
+                            <div class="screen">SCREEN</div>
+                            <div id="seatLayout" class="seat-layout" aria-label="Seat map"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Selected Seats</h3>
+                        <div id="selectedSeats" class="selected-seats" aria-live="polite"></div>
+                    </div>
+
+                    <div class="step-nav">
+                        <button type="button" class="btn back-btn">Back</button>
+                        <button type="button" class="btn next-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Confirm -->
+                <div class="step-content" data-step="4">
+                    <h2>Review Your Booking</h2>
+                    <div id="review" class="review-box" aria-live="polite"></div>
+                    <div class="step-nav">
+                        <button type="button" class="btn back-btn">Back</button>
+                        <button type="submit" class="btn">Confirm Booking</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sugarland Theaters. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
